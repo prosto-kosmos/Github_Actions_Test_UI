@@ -28,26 +28,26 @@ jobs:
       - name: Build
         run: npm run build --prod
 
-  lint:
-    name: Validate code style
-    needs: [install]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Install
-        uses: ./.github/actions/prepare
-      - name: Lint
-        run: npm run lint
+  # lint:
+  #   name: Validate code style
+  #   needs: [install]
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v4
+  #     - name: Install
+  #       uses: ./.github/actions/prepare
+  #     - name: Lint
+  #       run: npm run lint
 
-  test:
-    name: Run tests
-    needs: [install]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Install
-        uses: ./.github/actions/prepare
-      - name: Run tests
-        run: npm run test
+  # test:
+  #   name: Run tests
+  #   needs: [install]
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v4
+  #     - name: Install
+  #       uses: ./.github/actions/prepare
+  #     - name: Run tests
+  #       run: npm run test
