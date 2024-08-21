@@ -1,0 +1,14 @@
+name: 'Prepare: Checkout and Install'
+description: 'Prepares the repo for a job by checking out and installing dependencies'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+    - name: Install packages
+      shell: bash
+      run: npm ci
