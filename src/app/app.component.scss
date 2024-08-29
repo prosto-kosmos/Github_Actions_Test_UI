@@ -1,0 +1,28 @@
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+table {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.empty {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 2px 4px;
+}
